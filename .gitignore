@@ -1,0 +1,58 @@
+### Node / TypeScript / Editor ignores for a typical API project
+
+# Node
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+
+# Build outputs
+dist/
+build/
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# Local environment files (keep .env.example in repo)
+.env
+.env.*.local
+.env.local
+.env.development
+.env.test
+.env.production
+!/.env.example
+
+# Editor / IDE
+.vscode/
+.idea/
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Misc caches
+.cache/
+.parcel-cache/
+
+# npm pack
+*.tgz
+
+# Temporary
+/tmp
+temp/
