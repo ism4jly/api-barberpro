@@ -56,3 +56,17 @@ desktop.ini
 # Temporary
 /tmp
 temp/
+
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+*.env
+.env*
+.env.*
+!.env.example
+/prisma/migrations/
+node_modules/
+dist/
+*.db
+*.db-journal
+/src/generated/prisma
