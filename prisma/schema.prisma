@@ -22,8 +22,8 @@ model User {
   password  String
   stripe_customer_id String?
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
 
   @@map("users")
   subscriptions Subscription?
@@ -35,8 +35,8 @@ model Subscription {
   id        String   @id
   status    String
   priceId   String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
 
   @@map("subscriptions")
   userId String @unique
@@ -48,8 +48,8 @@ model Haircut {
   name      String
   price     Float
   status    Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
 
   @@map("haircuts")
   user User @relation(fields: [user_id], references: [id])
@@ -60,8 +60,8 @@ model Haircut {
 model Service{
   id        String   @id @default(uuid())
   customer      String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
 
   @@map("services")
   haircut Haircut @relation(fields: [haircut_id], references: [id])
