@@ -50,8 +50,6 @@ class SubscribeService {
             cancel_url: process.env.STRIPE_CANCEL_URL,
         });
 
-        console.log("Stripe session:", stripeCheckoutSession.url);
-
         return {
             sessionUrl: stripeCheckoutSession.url,
         };
