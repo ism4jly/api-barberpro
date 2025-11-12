@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { SubscribreService } from "../../services/subscriptions/SubscribreService";
+import { SubscribeService } from "../../services/subscriptions/SubscribeService";
 
 class SubscribreController{
     async handle(request: Request, response: Response){
-        const { user_id } = request.body;
+        const user_id  = request.user_id;
 
-        const subscribreService = new SubscribreService();
+        const subscribreService = new SubscribeService();
 
         const subscribre = await subscribreService.execute({
             user_id,
